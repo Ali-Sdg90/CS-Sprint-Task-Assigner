@@ -3,15 +3,25 @@ const times = document.querySelectorAll(
     ".padding-horizontal-16 .padding-bottom-8 > div:last-child"
 );
 
-const timesArray = Array.from(times);
+let timesArray = Array.from(times);
 
-timesArray.splice(21, 1);
+timesArray.splice(24, 1);
+
+// console.log(timesArray.map((item) => item.textContent));
+
+timesArray = timesArray.map((timeString) => {
+    const times = timeString.textContent.match(/\d+(\.\d+)?/g)?.map(Number);
+    const availableTime = Math.trunc(times[1] - times[0]);
+    return availableTime;
+});
+
+// console.log(timesArray);
 
 const memberObjects = [];
 
 for (let i = 0; i < Math.min(members.length, timesArray.length); i++) {
     const memberName = members[i].textContent;
-    const memberTime = timesArray[i].textContent;
+    const memberTime = timesArray[i];
 
     const memberObject = {
         name: memberName,
@@ -27,4 +37,4 @@ const bigObject = {
     members: memberObjects,
 };
 
-console.log(bigObject);
+console.log(JSON.stringify(bigObject, null, 2));

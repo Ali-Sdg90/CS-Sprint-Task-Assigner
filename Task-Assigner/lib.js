@@ -2,7 +2,7 @@
 let theWheel = new Winwheel({
     numSegments: libSegments.length, // Specify number of segments.
     outerRadius: 212, // Set outer radius so wheel fits inside the background.
-    textFontSize: 56 - (28 / 8) * libSegments.length, // Set font size as desired.
+    textFontSize: 15, // Set font size as desired.
     // Define segments including colour and text.
     segments: libSegments,
     // Specify the animation to use.
