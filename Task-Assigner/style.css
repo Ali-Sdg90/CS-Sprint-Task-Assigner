@@ -1,7 +1,83 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #222222;
-    /* color: white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222222;
+  /* color: white; */
+  width: 80%;
 }
+
+.filter-names {
+  border: 1px solid red;
+  margin-left: 150px;
+  width: 350px;
+  background-color: gray;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.258);
+  overflow: hidden;
+  position: absolute;
+  right: 5%;
+  top: 10px;
+}
+.filter-names .team-selector {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+.filter-names .team-selector div {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+.filter-names .team-selector div:hover {
+  background-color: rgb(158, 158, 158);
+}
+.filter-names .team-selector div:active {
+  background-color: rgb(112, 112, 112);
+}
+.filter-names .team-selector .active-btn {
+  background-color: rgb(112, 112, 112);
+}
+.filter-names .team-selector .active-btn:hover {
+  background-color: rgb(112, 112, 112);
+}
+.filter-names .team-selector .active-btn:active {
+  background-color: rgb(112, 112, 112);
+}
+.filter-names .person {
+  padding: 8px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.filter-names .person .person-time {
+  display: flex;
+  gap: 5px;
+}
+.filter-names .person .person-time .member-btns {
+  border: 1px solid black;
+  width: 18px;
+  height: 18px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: background-color 0.15s;
+  cursor: pointer;
+}
+.filter-names .person .person-time .member-btns:hover {
+  background-color: rgb(158, 158, 158);
+}
+.filter-names .person .person-time .member-btns:active {
+  background-color: rgb(112, 112, 112);
+}
+.filter-names .person .person-time .time {
+  width: 20px;
+  display: flex;
+  justify-content: center;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,94 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222222;
+    /* color: white; */
+    width: 80%;
+}
+
+.filter-names {
+    border: 1px solid red;
+    margin-left: 150px;
+    width: 350px;
+    background-color: gray;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.258);
+    overflow: hidden;
+    position: absolute;
+    right: 5%;
+    top: 10px;
+
+    .team-selector {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+
+        // border: 1px solid blue;
+        div {
+            height: 50px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.15s;
+
+            &:hover {
+                background-color: rgb(158, 158, 158);
+            }
+            &:active {
+                background-color: rgb(112, 112, 112);
+            }
+        }
+
+        .active-btn {
+            background-color: rgb(112, 112, 112);
+
+            &:hover {
+                background-color: rgb(112, 112, 112);
+            }
+            &:active {
+                background-color: rgb(112, 112, 112);
+            }
+        }
+    }
+
+    .person {
+        padding: 8px 15px;
+        display: flex;
+        justify-content: space-between;
+
+        .person-time {
+            display: flex;
+            gap: 5px;
+
+            .member-btns {
+                border: 1px solid black;
+                width: 18px;
+                height: 18px;
+                font-size: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                transition: background-color 0.15s;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgb(158, 158, 158);
+                }
+                &:active {
+                    background-color: rgb(112, 112, 112);
+                }
+            }
+
+            .time {
+                width: 20px;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}

@@ -18,50 +18,12 @@
                     <div class="power_controls">
                         <br />
                         <br />
-                        <table class="power" cellpadding="10" cellspacing="0">
-                            <tr>
-                                <th align="center">Power</th>
-                            </tr>
-                            <tr>
-                                <td
-                                    width="78"
-                                    align="center"
-                                    id="pw3"
-                                    onClick="powerSelected(3);"
-                                >
-                                    High
-                                </td>
-                            </tr>
-                            <tr>
-                                <td
-                                    align="center"
-                                    id="pw2"
-                                    onClick="powerSelected(2);"
-                                >
-                                    Med
-                                </td>
-                            </tr>
-                            <tr>
-                                <td
-                                    align="center"
-                                    id="pw1"
-                                    onClick="powerSelected(1);"
-                                >
-                                    Low
-                                </td>
-                            </tr>
-                        </table>
                         <br />
-                        <img
-                            id="spin_button"
-                            src="spin_off.png"
-                            alt="Spin"
-                            onClick="startSpin();"
-                        />
+                        <img id="spin_button" src="spin_off.png" alt="Spin" />
                         <br /><br />
                         &nbsp;&nbsp;<a
                             href="#"
-                            onClick="resetWheel(); return false;"
+                            id="play-again"
                             >Play Again</a
                         ><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(reset)
                     </div>
@@ -83,7 +45,7 @@
             </tr>
         </table>
 
-        <div class="filter-names">
+        <!-- <div class="filter-names">
             <div class="team-selector">
                 <div>team A</div>
                 <div>team B</div>
@@ -103,10 +65,44 @@
                 <div class="name">abas</div>
                 <div class="time">-2</div>
             </div>
+        </div> -->
+
+        <div class="filter-names">
+            <div class="team-selector">
+                <div class="team-btn-A active-btn">team A</div>
+                <div class="team-btn-B">team B</div>
+            </div>
+            <div class="team-member">
+                <div class="person team-B">
+                    <div class="name">ali</div>
+                    <div class="person-time">
+                        <div class="remove-btn">-</div>
+                        <div class="time">3</div>
+                        <div class="add-btn">+</div>
+                    </div>
+                </div>
+                <div class="person team-A">
+                    <div class="name">hooman</div>
+                    <div class="person-time">
+                        <div class="remove-btn">-</div>
+                        <div class="time">2</div>
+                        <div class="add-btn">+</div>
+                    </div>
+                </div>
+                <div class="person team-A">
+                    <div class="name">abas</div>
+                    <div class="person-time">
+                        <div class="remove-btn">-</div>
+                        <div class="time">-1</div>
+                        <div class="add-btn">+</div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <script src="bigObject.js"></script>
         <script src="segmentsMaker.js"></script>
+        <script src="filter-names.js"></script>
         <script src="lib.js"></script>
     </body>
 </html>

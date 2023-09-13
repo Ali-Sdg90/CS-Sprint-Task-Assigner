@@ -9,8 +9,6 @@
 //     { fillStyle: "#e7706f", text: "Prize 8" },
 // ];
 
-const libSegments = [];
-
 const hexArray = [
     "0",
     "1",
@@ -30,25 +28,32 @@ const hexArray = [
     "f",
 ];
 
-for (let person = 0; person < bigObject.length; person++) {
-    if (bigObject[person].time > 0) {
-        const chanceArray = [];
+let libSegments = [];
 
-        let personColor = "#";
-        for (let i = 0; i < 6; i++) {
-            personColor += hexArray[Math.trunc(Math.random() * 16)];
+const SegmentMakerFunction = () => {
+    libSegments = [];
+
+    for (let person = 0; person < bigObject.length; person++) {
+        if (bigObject[person].time > 0) {
+            const chanceArray = [];
+
+            let personColor = "#";
+            for (let i = 0; i < 6; i++) {
+                personColor += hexArray[Math.trunc(Math.random() * 16)];
+            }
+
+            for (let i = 0; i < bigObject[person].time; i++) {
+                const chanceObj = {
+                    fillStyle: personColor,
+                    text: bigObject[person].name,
+                };
+                chanceArray.push(chanceObj);
+            }
+
+            libSegments.push(...chanceArray);
         }
-
-        for (let i = 0; i < bigObject[person].time; i++) {
-            const chanceObj = {
-                fillStyle: personColor,
-                text: bigObject[person].name,
-            };
-            chanceArray.push(chanceObj);
-        }
-
-        libSegments.push(...chanceArray);
     }
-}
 
-console.log(libSegments);
+    console.log(libSegments);
+};
+SegmentMakerFunction();
