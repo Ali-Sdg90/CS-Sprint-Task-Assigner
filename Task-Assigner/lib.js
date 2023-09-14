@@ -106,7 +106,7 @@ const showWheel = () => {
     // -------------------------------------------------------
     function alertPrize(indicatedSegment) {
         // Do basic alert of the segment text. You would probably want to do something more interesting with this information.
-        console.log("You have won " + indicatedSegment.text);
+        console.log(indicatedSegment.text + " Won!");
     }
 };
 showWheel();

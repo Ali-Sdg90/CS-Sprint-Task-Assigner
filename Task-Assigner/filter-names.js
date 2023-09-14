@@ -4,7 +4,8 @@ const makeControlPanel = () => {
     teamList.innerHTML = "";
 
     for (let i = 0; i < bigObject.length; i++) {
-        teamList.innerHTML += `
+        if (isTeamA === teamAMembers.includes(bigObject[i].name)) {
+            teamList.innerHTML += `
         <div class="person team-B">
             <div class="name">${bigObject[i].name}</div>
             <div class="person-time">
@@ -13,28 +14,80 @@ const makeControlPanel = () => {
                 <div class="add-btn${i} member-btns">+</div>
             </div>
         </div>`;
+        }
     }
 
     for (let i = 0; i < bigObject.length; i++) {
-        document
-            .querySelector(`.remove-btn${i}`)
-            .addEventListener("click", () => {
-                bigObject[i].time -= 1;
-                console.log(bigObject[i].name, bigObject[i].time);
+        if (isTeamA === teamAMembers.includes(bigObject[i].name)) {
+            document
+                .querySelector(`.remove-btn${i}`)
+                .addEventListener("click", () => {
+                    bigObject[i].time -= 1;
+                    console.log(bigObject[i].name, bigObject[i].time);
 
-                makeControlPanel();
-                SegmentMakerFunction();
-                showWheel();
-            });
+                    makeControlPanel();
+                    SegmentMakerFunction();
 
-        document.querySelector(`.add-btn${i}`).addEventListener("click", () => {
-            bigObject[i].time += 1;
-            console.log(bigObject[i].name, bigObject[i].time);
+                    if (bigObject[i].time >= 0) {
+                        showWheel();
+                    }
+                });
 
-            makeControlPanel();
-            SegmentMakerFunction();
-            showWheel();
-        });
+            document
+                .querySelector(`.add-btn${i}`)
+                .addEventListener("click", () => {
+                    bigObject[i].time += 1;
+                    console.log(bigObject[i].name, bigObject[i].time);
+
+                    makeControlPanel();
+                    SegmentMakerFunction();
+
+                    if (bigObject[i].time > 0) {
+                        showWheel();
+                    }
+                });
+        }
     }
 };
 makeControlPanel();
+
+const teamABtn = document.querySelector(".team-btn-A");
+const teamBBtn = document.querySelector(".team-btn-B");
+
+const teamABtnFunc = () => {
+    isTeamA = !isTeamA;
+    teamABtn.classList.toggle("active-btn");
+    teamBBtn.classList.toggle("active-btn");
+
+    SegmentMakerFunction();
+    makeControlPanel();
+
+    showWheel();
+
+    teamABtn.removeEventListener("click", teamABtnFunc);
+    teamBBtn.addEventListener("click", teamBBtnFunc);
+    teamABtn.style.cursor = "default";
+    teamBBtn.style.cursor = "pointer";
+};
+
+const teamBBtnFunc = () => {
+    isTeamA = !isTeamA;
+    teamABtn.classList.toggle("active-btn");
+    teamBBtn.classList.toggle("active-btn");
+
+    SegmentMakerFunction();
+    makeControlPanel();
+
+    showWheel();
+
+    teamBBtn.removeEventListener("click", teamBBtnFunc);
+    teamABtn.addEventListener("click", teamABtnFunc);
+    teamBBtn.style.cursor = "default";
+    teamABtn.style.cursor = "pointer";
+};
+
+teamBBtn.addEventListener("click", teamBBtnFunc);
+
+teamABtn.click();
+teamBBtn.click();
+teamABtn.click();

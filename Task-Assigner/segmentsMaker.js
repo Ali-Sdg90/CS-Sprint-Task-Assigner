@@ -28,29 +28,51 @@ const hexArray = [
     "f",
 ];
 
+const teamAMembers = [
+    "Afshin Alizadeh",
+    "Zahra Rezaei",
+    "Zahra Ahangari",
+    "Muhammad Amin Saffari Taheri",
+    "Ali Asghar Chavoshi",
+    "Hootan Hemmati",
+    "Behzad Seyfi",
+    "Arian Kazemi",
+    "Hediye Sezavaran",
+    "Kimia Heidari",
+    "Nafiseh Daneshian",
+    "Ali Sadeghi",
+];
+
 let libSegments = [];
+
+let minTime = 0;
+let isTeamA = true;
 
 const SegmentMakerFunction = () => {
     libSegments = [];
 
     for (let person = 0; person < bigObject.length; person++) {
-        if (bigObject[person].time > 0) {
-            const chanceArray = [];
+        // console.log(teamAMembers.includes(bigObject[person].name));
 
-            let personColor = "#";
-            for (let i = 0; i < 6; i++) {
-                personColor += hexArray[Math.trunc(Math.random() * 16)];
+        if (isTeamA === teamAMembers.includes(bigObject[person].name)) {
+            if (bigObject[person].time > minTime) {
+                const chanceArray = [];
+
+                let personColor = "#";
+                for (let i = 0; i < 6; i++) {
+                    personColor += hexArray[Math.trunc(Math.random() * 16)];
+                }
+
+                for (let i = 0; i < bigObject[person].time; i++) {
+                    const chanceObj = {
+                        fillStyle: personColor,
+                        text: bigObject[person].name,
+                    };
+                    chanceArray.push(chanceObj);
+                }
+
+                libSegments.push(...chanceArray);
             }
-
-            for (let i = 0; i < bigObject[person].time; i++) {
-                const chanceObj = {
-                    fillStyle: personColor,
-                    text: bigObject[person].name,
-                };
-                chanceArray.push(chanceObj);
-            }
-
-            libSegments.push(...chanceArray);
         }
     }
 
