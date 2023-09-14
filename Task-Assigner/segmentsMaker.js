@@ -10,10 +10,10 @@
 // ];
 
 const hexArray = [
-    "0",
-    "1",
-    "2",
-    "3",
+    // "0",
+    // "1",
+    // "2",
+    // "3",
     "4",
     "5",
     "6",
@@ -60,7 +60,7 @@ const SegmentMakerFunction = () => {
 
                 let personColor = "#";
                 for (let i = 0; i < 6; i++) {
-                    personColor += hexArray[Math.trunc(Math.random() * 16)];
+                    personColor += hexArray[Math.trunc(Math.random() * 12)];
                 }
 
                 for (let i = 0; i < bigObject[person].time; i++) {
