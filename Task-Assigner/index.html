@@ -18,11 +18,16 @@
             </div>
 
             <div class="input-section">
-                <input type="text" name="app-input" id="app-input" />
+                <input
+                    type="text"
+                    name="app-input"
+                    id="app-input"
+                    autocomplete="off"
+                />
 
                 <div class="input-section-btns">
-                    <div class="copy-code-btn">Copy Code</div>
-                    <div class="submit-code-btn">Submit Code</div>
+                    <div class="copy-code-btn">Copy Web Scraper</div>
+                    <div class="submit-code-btn">Submit Copied Obj</div>
                 </div>
             </div>
 
@@ -30,7 +35,12 @@
                 <div class="section-separator"></div>
                 <div>
                     <label for="task-queue">Queue Checking</label>
-                    <input type="radio" name="task-radio" id="task-queue" />
+                    <input
+                        type="radio"
+                        name="task-radio"
+                        id="task-queue"
+                        checked="true"
+                    />
                 </div>
                 <div>
                     <label for="task-type">Conduct Typing Race</label>
@@ -52,7 +62,11 @@
                         type="number"
                         name="custom-task-time"
                         id="custom-task-time"
+                        step="1"
+                        value="1"
+                        autocomplete="off"
                     />
+                    <input type="radio" name="task-radio" id="task-custome" />
                 </div>
 
                 <div class="task-submit-btn">Submit Task</div>
@@ -103,6 +117,12 @@
                     <div class="team-btn-B">team B</div>
                 </div>
                 <div class="team-member">
+                    <h3>
+                        Please click "Copy Web Scraper", paste the scraper code
+                        into the Azure console (ensure low page zoom), which
+                        will copy an object to your clipboard. Then, paste this
+                        object into the input box and click "Submit Copied Obj".
+                    </h3>
                     <!-- <div class="person team-B">
                     <div class="name">ali</div>
                     <div class="person-time">
@@ -135,5 +155,6 @@
         <script src="segmentsMaker.js"></script>
         <script src="lib.js"></script>
         <script src="filter-names.js"></script>
+        <script src="setting-menu.js"></script>
     </body>
 </html>

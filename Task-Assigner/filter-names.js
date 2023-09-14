@@ -1,11 +1,12 @@
 const teamList = document.querySelector(".team-member");
 
 const makeControlPanel = () => {
-    teamList.innerHTML = "";
+    if (bigObject.length) {
+        teamList.innerHTML = "";
 
-    for (let i = 0; i < bigObject.length; i++) {
-        if (isTeamA === teamAMembers.includes(bigObject[i].name)) {
-            teamList.innerHTML += `
+        for (let i = 0; i < bigObject.length; i++) {
+            if (isTeamA === teamAMembers.includes(bigObject[i].name)) {
+                teamList.innerHTML += `
         <div class="person team-B">
             <div class="name">${bigObject[i].name}</div>
             <div class="person-time">
@@ -14,38 +15,39 @@ const makeControlPanel = () => {
                 <div class="add-btn${i} member-btns">+</div>
             </div>
         </div>`;
+            }
         }
-    }
 
-    for (let i = 0; i < bigObject.length; i++) {
-        if (isTeamA === teamAMembers.includes(bigObject[i].name)) {
-            document
-                .querySelector(`.remove-btn${i}`)
-                .addEventListener("click", () => {
-                    bigObject[i].time -= 1;
-                    console.log(bigObject[i].name, bigObject[i].time);
+        for (let i = 0; i < bigObject.length; i++) {
+            if (isTeamA === teamAMembers.includes(bigObject[i].name)) {
+                document
+                    .querySelector(`.remove-btn${i}`)
+                    .addEventListener("click", () => {
+                        bigObject[i].time -= 1;
+                        console.log(bigObject[i].name, bigObject[i].time);
 
-                    makeControlPanel();
-                    SegmentMakerFunction();
+                        makeControlPanel();
+                        SegmentMakerFunction();
 
-                    if (bigObject[i].time >= 0) {
-                        showWheel();
-                    }
-                });
+                        if (bigObject[i].time >= 0) {
+                            showWheel();
+                        }
+                    });
 
-            document
-                .querySelector(`.add-btn${i}`)
-                .addEventListener("click", () => {
-                    bigObject[i].time += 1;
-                    console.log(bigObject[i].name, bigObject[i].time);
+                document
+                    .querySelector(`.add-btn${i}`)
+                    .addEventListener("click", () => {
+                        bigObject[i].time += 1;
+                        console.log(bigObject[i].name, bigObject[i].time);
 
-                    makeControlPanel();
-                    SegmentMakerFunction();
+                        makeControlPanel();
+                        SegmentMakerFunction();
 
-                    if (bigObject[i].time > 0) {
-                        showWheel();
-                    }
-                });
+                        if (bigObject[i].time > 0) {
+                            showWheel();
+                        }
+                    });
+            }
         }
     }
 };

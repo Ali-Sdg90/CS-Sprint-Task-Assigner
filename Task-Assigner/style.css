@@ -39,6 +39,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 7px;
 }
 .left-menu .input-section #app-input {
   width: 300px;
@@ -46,6 +47,7 @@ body {
   border-radius: 10px;
   background-color: rgb(177, 177, 177);
   font-size: 20px;
+  padding: 0 5px;
 }
 .left-menu .input-section .input-section-btns {
   display: flex;
@@ -162,6 +164,10 @@ body {
 }
 .filter-names .team-selector .active-btn:active {
   background-color: rgb(112, 112, 112);
+}
+.filter-names h3 {
+  text-align: justify;
+  padding: 10px 20px;
 }
 .filter-names .person {
   padding: 8px 15px;

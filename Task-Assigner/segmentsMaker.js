@@ -55,7 +55,7 @@ const SegmentMakerFunction = () => {
         // console.log(teamAMembers.includes(bigObject[person].name));
 
         if (isTeamA === teamAMembers.includes(bigObject[person].name)) {
-            if (bigObject[person].time > minTime) {
+            if (bigObject[person].time >= minTime) {
                 const chanceArray = [];
 
                 let personColor = "#";

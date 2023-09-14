@@ -51,6 +51,7 @@ body {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        gap: 7px;
 
         #app-input {
             width: 300px;
@@ -58,6 +59,7 @@ body {
             border-radius: 10px;
             background-color: rgb(177, 177, 177);
             font-size: 20px;
+            padding: 0 5px;
         }
 
         .input-section-btns {
@@ -203,6 +205,11 @@ body {
                 background-color: rgb(112, 112, 112);
             }
         }
+    }
+
+    h3 {
+        text-align: justify;
+        padding: 10px 20px;
     }
 
     .person {
