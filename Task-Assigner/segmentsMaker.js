@@ -99,8 +99,15 @@ const spinBtnFunc = () => {
     resetBtn.classList.toggle("hide-btn");
 
     setTimeout(() => {
-        console.log(winner);
-    }, 4000);
+        console.log(winner.length);
+        if (winner.length) {
+            console.log(winner);
+            document.querySelector(
+                ".winner-announcer-txt"
+            ).textContent = `${winner} is Winner!`;
+        }
+        winner = "";
+    }, 4500);
 };
 
 spinBtn.addEventListener("click", spinBtnFunc);

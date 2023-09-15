@@ -11,6 +11,7 @@ body {
   background-color: #222222;
   /* color: white; */
   width: 100%;
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   padding: 0 40px;
@@ -208,4 +209,52 @@ body {
   width: 20px;
   display: flex;
   justify-content: center;
+}
+
+.winner-announcer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(29, 29, 29);
+  border: 3px solid white;
+  color: white;
+  font-size: 60px;
+  letter-spacing: 2px;
+  width: 1000px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  border-radius: 10px;
+  box-shadow: 0 0 1000px 1000px rgba(0, 0, 0, 0.5), inset 0 0 5px 5px rgba(255, 255, 255, 0.577), 0 0 20px 20px rgba(0, 0, 0, 0.4);
+}
+.winner-announcer .winner-announcer-closer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgb(92, 0, 0);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 25px;
+  border-radius: 50%;
+  background-color: rgb(67, 0, 0);
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+.winner-announcer .winner-announcer-closer div {
+  position: relative;
+  top: -1px;
+  left: 1px;
+}
+.winner-announcer .winner-announcer-closer:hover {
+  opacity: 1;
+}
+.winner-announcer .winner-announcer-closer:active {
+  opacity: 0.9;
 }/*# sourceMappingURL=style.css.map */
