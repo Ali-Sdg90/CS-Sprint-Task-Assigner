@@ -9,7 +9,7 @@ const showWheel = () => {
         // Specify the animation to use.
         animation: {
             type: "spinToStop",
-            duration: 3, // Duration in seconds.
+            duration: 4, // Duration in seconds.
             spins: 8, // Number of complete spins.
             callbackFinished: alertPrize,
         },
@@ -47,8 +47,8 @@ const showWheel = () => {
             wheelPower = powerLevel;
 
             // Light up the spin button by changing it's source image and adding a clickable class to it.
-            document.getElementById("spin_button").src = "spin_on.png";
-            document.getElementById("spin_button").className = "clickable";
+            // document.getElementById("spin-button").src = "spin_on.png";
+            document.querySelector(".spin-button").classList.add("clickable");
         }
     }
 
@@ -56,7 +56,7 @@ const showWheel = () => {
     // Click handler for spin button.
     // -------------------------------------------------------
 
-    document.getElementById("spin_button").addEventListener("click", () => {
+    document.querySelector(".spin-button").addEventListener("click", () => {
         // Ensure that spinning can't be clicked again while already running.
         if (wheelSpinning == false) {
             // Based on the power level selected adjust the number of spins for the wheel, the more times is has
@@ -70,8 +70,9 @@ const showWheel = () => {
             }
 
             // Disable the spin button so can't click again while wheel is spinning.
-            document.getElementById("spin_button").src = "spin_off.png";
-            document.getElementById("spin_button").className = "";
+            // document
+            //     .querySelector(".spin-button")
+            //     .classList.remove("clickable");
 
             // Begin the spin animation by calling startAnimation on the wheel object.
             theWheel.startAnimation();
@@ -86,7 +87,8 @@ const showWheel = () => {
     // Function for reset button.
     // -------------------------------------------------------
 
-    document.getElementById("play-again").addEventListener("click", () => {
+    // if (document.querySelector(".play-again")) {
+    document.querySelector(".play-again").addEventListener("click", () => {
         theWheel.stopAnimation(false); // Stop the animation, false as param so does not call callback function.
         theWheel.rotationAngle = 0; // Re-set the wheel angle to 0 degrees.
         theWheel.draw(); // Call draw to render changes to the wheel.
@@ -97,6 +99,7 @@ const showWheel = () => {
 
         wheelSpinning = false; // Reset to false to power buttons and spin can be clicked again.
     });
+    // }
 
     // function resetWheel() {}
 
@@ -107,6 +110,7 @@ const showWheel = () => {
     function alertPrize(indicatedSegment) {
         // Do basic alert of the segment text. You would probably want to do something more interesting with this information.
         console.log(indicatedSegment.text + " Won!");
+        winner = indicatedSegment.text;
     }
 };
 showWheel();

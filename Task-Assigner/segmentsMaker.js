@@ -79,3 +79,33 @@ const SegmentMakerFunction = () => {
     console.log(libSegments);
 };
 SegmentMakerFunction();
+
+let winner = "";
+
+const spinBtn = document.querySelector(".spin-button");
+const resetBtn = document.querySelector(".play-again");
+
+const spinBtnFunc = () => {
+    // spinBtn.removeEventListener("click", spinBtnFunc);
+
+    // setTimeout(() => {
+    //     spinBtn.classList.toggle("hide-btn");
+    //     resetBtn.classList.toggle("hide-btn");
+
+    //     spinBtn.addEventListener("click", spinBtnFunc);
+    // }, 4000);
+
+    spinBtn.classList.toggle("hide-btn");
+    resetBtn.classList.toggle("hide-btn");
+
+    setTimeout(() => {
+        console.log(winner);
+    }, 4000);
+};
+
+spinBtn.addEventListener("click", spinBtnFunc);
+
+resetBtn.addEventListener("click", () => {
+    spinBtn.classList.toggle("hide-btn");
+    resetBtn.classList.toggle("hide-btn");
+});
