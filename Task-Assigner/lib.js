@@ -9,7 +9,7 @@ const showWheel = () => {
         // Specify the animation to use.
         animation: {
             type: "spinToStop",
-            duration: 5, // Duration in seconds.
+            duration: 3, // Duration in seconds.
             spins: 8, // Number of complete spins.
             callbackFinished: alertPrize,
         },

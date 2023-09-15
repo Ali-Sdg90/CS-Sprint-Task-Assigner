@@ -1,46 +1,49 @@
-const memberObjects = [];
+const azureScraperCode = () => {
+    let bigObject = [];
 
-document.querySelectorAll(".padding-right-4").forEach((element) => {
-    if (
-        !element.classList.contains("editable-field") &&
-        !element.classList.contains("bolt-coin")
-    ) {
-        const childDiv = element.querySelector(
-            ".flex-row.flex-center.padding-bottom-4"
-        );
+    document.querySelectorAll(".padding-right-4").forEach((element) => {
+        if (
+            !element.classList.contains("editable-field") &&
+            !element.classList.contains("bolt-coin")
+        ) {
+            const childDiv = element.querySelector(
+                ".flex-row.flex-center.padding-bottom-4"
+            );
 
-        if (childDiv) {
-            // console.log(element.querySelectorAll("div")[6].textContent);
+            if (childDiv) {
+                // console.log(element.querySelectorAll("div")[6].textContent);
 
-            const memberObject = {
-                name: childDiv.textContent,
-                time: element.querySelectorAll("div")[6].textContent,
-            };
+                const timeString =
+                    element.querySelectorAll("div")[6].textContent;
 
-            memberObjects.push(memberObject);
+                const times = timeString.match(/\d+(\.\d+)?/g)?.map(Number);
+                const availableTime = Math.trunc(times[1] - times[0]);
+
+                const memberObject = {
+                    name: childDiv.textContent,
+                    time: availableTime,
+                };
+
+                bigObject.push(memberObject);
+            }
         }
-    }
-});
+    });
 
-let bigObject = {
-    members: memberObjects,
-};
+    bigObject = JSON.stringify(bigObject, null, 2);
 
-bigObject = JSON.stringify(bigObject, null, 2);
+    console.log(bigObject);
 
-// console.log(JSON.stringify(bigObject, null, 2));
+    // Most focus on page:
+    console.log("Focus on page!");
 
-console.log(bigObject);
-
-// To focus on page:
-
-setTimeout(() => {
-    navigator.clipboard
-        .writeText(bigObject)
-        .then(() => {
-            console.log(`Copied JSON data to clipboard`);
-        })
-        .catch((error) => {
-            console.error("Unable to copy JSON data to clipboard: ", error);
-        });
-}, 1000);
+    setTimeout(() => {
+        navigator.clipboard
+            .writeText(bigObject)
+            .then(() => {
+                console.log("Copied JSON data to clipboard");
+            })
+            .catch((error) => {
+                console.error("Unable to copy JSON data to clipboard: ", error);
+            });
+    }, 1000);
+}
