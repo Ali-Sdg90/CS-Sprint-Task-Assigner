@@ -7,14 +7,14 @@ const makeControlPanel = () => {
         for (let i = 0; i < bigObject.length; i++) {
             if (isTeamA === teamAMembers.includes(bigObject[i].name)) {
                 teamList.innerHTML += `
-        <div class="person team-B">
-            <div class="name">${bigObject[i].name}</div>
-            <div class="person-time">
-                <div class="remove-btn${i} member-btns">-</div>
-                <div class="time">${bigObject[i].time}</div>
-                <div class="add-btn${i} member-btns">+</div>
-            </div>
-        </div>`;
+                    <div class="person team-B">
+                        <div class="name">${bigObject[i].name}</div>
+                        <div class="person-time">
+                            <div class="remove-btn${i} member-btns">-</div>
+                            <div class="time">${bigObject[i].time}</div>
+                            <div class="add-btn${i} member-btns">+</div>
+                        </div>
+                    </div>`;
             }
         }
 

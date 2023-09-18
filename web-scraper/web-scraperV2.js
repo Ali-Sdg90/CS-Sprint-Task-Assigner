@@ -19,8 +19,14 @@ const azureScraperCode = () => {
                 const times = timeString.match(/\d+(\.\d+)?/g)?.map(Number);
                 const availableTime = Math.trunc(times[1] - times[0]);
 
+                let memberName = childDiv.textContent;
+
+                if (memberName === "Muhammad Amin Saffari Taheri") {
+                    memberName = "Muhammad Amin Saffari";
+                }
+
                 const memberObject = {
-                    name: childDiv.textContent,
+                    name: memberName,
                     time: availableTime,
                 };
 

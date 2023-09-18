@@ -265,7 +265,7 @@ a {
   color: white;
   font-size: 60px;
   letter-spacing: 2px;
-  width: 1000px;
+  width: 1100px;
   height: 300px;
   display: flex;
   justify-content: center;
@@ -273,6 +273,9 @@ a {
   z-index: 10;
   border-radius: 10px;
   box-shadow: 0 0 1000px 1000px rgba(0, 0, 0, 0.5), inset 0 0 5px 5px rgba(255, 255, 255, 0.577), 0 0 20px 20px rgba(0, 0, 0, 0.4);
+  transition: opacity 0.2s;
+  opacity: 0;
+  display: none;
 }
 .winner-announcer .winner-announcer-closer {
   display: flex;
@@ -295,6 +298,7 @@ a {
   position: relative;
   top: -1px;
   left: 1px;
+  cursor: pointer;
 }
 .winner-announcer .winner-announcer-closer:hover {
   opacity: 1;

@@ -32,7 +32,7 @@ const teamAMembers = [
     "Afshin Alizadeh",
     "Zahra Rezaei",
     "Zahra Ahangari",
-    "Muhammad Amin Saffari Taheri",
+    "Muhammad Amin Saffari",
     "Ali Asghar Chavoshi",
     "Hootan Hemmati",
     "Behzad Seyfi",
@@ -85,6 +85,9 @@ let winner = "";
 const spinBtn = document.querySelector(".spin-button");
 const resetBtn = document.querySelector(".play-again");
 
+const winnerAnnouncer = document.querySelector(".winner-announcer");
+const winnerAnnouncerTxt = document.querySelector(".winner-announcer-txt");
+
 const spinBtnFunc = () => {
     // spinBtn.removeEventListener("click", spinBtnFunc);
 
@@ -102,11 +105,18 @@ const spinBtnFunc = () => {
         console.log(winner.length);
         if (winner.length) {
             console.log(winner);
-            document.querySelector(
-                ".winner-announcer-txt"
-            ).textContent = `${winner} is Winner!`;
+            winnerAnnouncerTxt.textContent = `${winner} is Winner!`;
         }
         winner = "";
+
+        console.log("in");
+
+        winnerAnnouncer.style.display = "flex";
+        winnerAnnouncer.style.opacity = "0";
+
+        setTimeout(() => {
+            winnerAnnouncer.style.opacity = "1";
+        }, 200);
     }, 4500);
 };
 
@@ -115,4 +125,14 @@ spinBtn.addEventListener("click", spinBtnFunc);
 resetBtn.addEventListener("click", () => {
     spinBtn.classList.toggle("hide-btn");
     resetBtn.classList.toggle("hide-btn");
+});
+
+const winnerAnnouncerBtn = document.querySelector(".winner-announcer-closer");
+
+winnerAnnouncerBtn.addEventListener("click", () => {
+    winnerAnnouncer.style.opacity = "0";
+
+    setTimeout(() => {
+        winnerAnnouncer.style.display = "none";
+    }, 200);
 });
