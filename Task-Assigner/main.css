@@ -78,18 +78,20 @@ td.pw3 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
     /* gap: 10px; */
+    transform: scale(0.95);
 }
 
 .wheel-btns {
-    position: relative;
+    position: absolute;
     /* border: 1px solid red; */
     width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
-    top: -80px;
+    top: 500px;
 }
 
 .wheel-btns div {

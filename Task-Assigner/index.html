@@ -12,79 +12,94 @@
         <title>CS-Sprint-Task-Assigner</title>
     </head>
     <body>
-        <div class="winner-announcer">
+        <!-- <div class="winner-announcer">
             <div class="winner-announcer-closer">
                 <div>x</div>
             </div>
             <div class="winner-announcer-txt">hello</div>
-        </div>
+        </div> -->
 
-        <div class="left-menu">
-            <div class="menu-header">
-                <h1>Setting Menu</h1>
-            </div>
+        <header>- CS Sprint Task Assigner -</header>
 
-            <div class="input-section">
-                <input
-                    type="text"
-                    name="app-input"
-                    id="app-input"
-                    autocomplete="off"
-                    placeholder="Paste scraped object here"
-                />
-
-                <div class="input-section-btns">
-                    <div class="copy-code-btn">Copy Web Scraper</div>
-                    <div class="submit-code-btn">Submit Copied Obj</div>
+        <main>
+            <div class="left-menu">
+                <div class="menu-header">
+                    <h1>Setting Menu</h1>
                 </div>
-            </div>
 
-            <div class="select-task">
-                <div class="section-separator"></div>
-                <div>
-                    <label for="task-queue">Queue Checking</label>
+                <div class="input-section">
                     <input
-                        type="radio"
-                        name="task-radio"
-                        id="task-queue"
-                        checked="true"
-                    />
-                </div>
-                <div>
-                    <label for="task-type">Conduct Typing Race</label>
-                    <input type="radio" name="task-radio" id="task-type" />
-                </div>
-                <div>
-                    <label for="task-onenote">Check OneNote Pages</label>
-                    <input type="radio" name="task-radio" id="task-onenote" />
-                </div>
-                <div>
-                    <label for="task-meeting"
-                        >Organizer Operational Meeting</label
-                    >
-                    <input type="radio" name="task-radio" id="task-meeting" />
-                </div>
-                <div>
-                    <label for="custom-task-time">Custom Time:</label>
-                    <input
-                        type="number"
-                        name="custom-task-time"
-                        id="custom-task-time"
-                        step="1"
-                        value="1"
+                        type="text"
+                        name="app-input"
+                        id="app-input"
                         autocomplete="off"
+                        placeholder="Paste scraped object here"
                     />
-                    <input type="radio" name="task-radio" id="task-custome" />
+
+                    <div class="input-section-btns">
+                        <div class="copy-code-btn">Copy Web Scraper</div>
+                        <div class="submit-code-btn">Submit Copied Obj</div>
+                    </div>
                 </div>
 
-                <div class="task-submit-btn">Submit Task</div>
-            </div>
-        </div>
+                <div class="select-task">
+                    <div class="section-separator"></div>
+                    <div>
+                        <label for="task-queue">Queue Checking</label>
+                        <input
+                            type="radio"
+                            name="task-radio"
+                            id="task-queue"
+                            checked="true"
+                        />
+                    </div>
+                    <div>
+                        <label for="task-type">Conduct Typing Race</label>
+                        <input type="radio" name="task-radio" id="task-type" />
+                    </div>
+                    <div>
+                        <label for="task-onenote">Check OneNote Pages</label>
+                        <input
+                            type="radio"
+                            name="task-radio"
+                            id="task-onenote"
+                        />
+                    </div>
+                    <div>
+                        <label for="task-meeting"
+                            >Organizer Operational Meeting</label
+                        >
+                        <input
+                            type="radio"
+                            name="task-radio"
+                            id="task-meeting"
+                        />
+                    </div>
+                    <div>
+                        <label for="custom-task-time">Custom Time:</label>
+                        <input
+                            type="number"
+                            name="custom-task-time"
+                            id="custom-task-time"
+                            step="1"
+                            value="1"
+                            autocomplete="off"
+                        />
+                        <input
+                            type="radio"
+                            name="task-radio"
+                            id="task-custome"
+                        />
+                    </div>
 
-        <div class="the-wheel">
-            <table cellpadding="0" cellspacing="0" border="0">
-                <tr>
-                    <!-- <td>
+                    <div class="task-submit-btn">Submit Task</div>
+                </div>
+            </div>
+
+            <div class="the-wheel">
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <!-- <td>
                         <div class="power_controls">
                             <br />
                             <br />
@@ -101,43 +116,44 @@
                         </div>
                     </td> -->
 
-                    <td
-                        width="438"
-                        height="582"
-                        class="the_wheel"
-                        align="center"
-                        valign="center"
-                    >
-                        <canvas id="canvas" width="434" height="434">
-                            <p style="color: white" align="center">
-                                Sorry, your browser doesn't support canvas.
-                                Please try another.
-                            </p>
-                        </canvas>
-                    </td>
-                </tr>
-            </table>
+                        <td
+                            width="438"
+                            height="582"
+                            class="the_wheel"
+                            align="center"
+                            valign="center"
+                        >
+                            <canvas id="canvas" width="434" height="434">
+                                <p style="color: white" align="center">
+                                    Sorry, your browser doesn't support canvas.
+                                    Please try another.
+                                </p>
+                            </canvas>
+                        </td>
+                    </tr>
+                </table>
 
-            <div class="wheel-btns">
-                <div class="spin-button">Spin the Wheel</div>
-                <div class="play-again hide-btn">Reset the Wheel</div>
-            </div>
-        </div>
-
-        <div class="right-menu">
-            <div class="filter-names">
-                <div class="team-selector">
-                    <div class="team-btn-A active-btn">team A</div>
-                    <div class="team-btn-B">team B</div>
+                <div class="wheel-btns">
+                    <div class="spin-button">Spin the Wheel</div>
+                    <div class="play-again hide-btn">Reset the Wheel</div>
                 </div>
-                <div class="team-member">
-                    <h3>
-                        Please click "Copy Web Scraper", paste the scraper code
-                        into the Azure console (ensure low page zoom), which
-                        will copy an object to your clipboard. Then, paste this
-                        object into the input box and click "Submit Copied Obj".
-                    </h3>
-                    <!-- <div class="person team-B">
+            </div>
+
+            <div class="right-menu">
+                <div class="filter-names">
+                    <div class="team-selector">
+                        <div class="team-btn-A active-btn">team A</div>
+                        <div class="team-btn-B">team B</div>
+                    </div>
+                    <div class="team-member">
+                        <h3>
+                            Please click "Copy Web Scraper", paste the scraper
+                            code into the Azure console (ensure low page zoom),
+                            which will copy an object to your clipboard. Then,
+                            paste this object into the input box and click
+                            "Submit Copied Obj".
+                        </h3>
+                        <!-- <div class="person team-B">
                     <div class="name">ali</div>
                     <div class="person-time">
                         <div class="remove-btn">-</div>
@@ -161,9 +177,14 @@
                         <div class="add-btn">+</div>
                     </div>
                 </div> -->
+                    </div>
                 </div>
             </div>
-        </div>
+        </main>
+
+        <footer>
+            <a href="https://github.com/Ali-Sdg90">&copy; Ali Sadeghi 2023</a>
+        </footer>
 
         <script src="../web-scraperV2.js"></script>
         <script src="bigObject.js"></script>
