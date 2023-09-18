@@ -40,10 +40,10 @@ const azureScraperCode = () => {
         navigator.clipboard
             .writeText(bigObject)
             .then(() => {
-                console.log("Copied JSON data to clipboard");
+                console.log("Copied JSON data to clipboard.");
             })
             .catch((error) => {
-                console.error("Unable to copy JSON data to clipboard: ", error);
+                console.error("Error: ", error);
             });
     }, 1000);
-}
+};
