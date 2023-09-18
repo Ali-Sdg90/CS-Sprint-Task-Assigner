@@ -4,10 +4,11 @@ const makeControlPanel = () => {
     if (bigObject.length) {
         teamList.innerHTML = "";
 
+        // Add list to HTML:
         for (let i = 0; i < bigObject.length; i++) {
             if (isTeamA === teamAMembers.includes(bigObject[i].name)) {
                 teamList.innerHTML += `
-                    <div class="person team-B">
+                    <div class="person">
                         <div class="name">${bigObject[i].name}</div>
                         <div class="person-time">
                             <div class="remove-btn${i} member-btns">-</div>
@@ -18,6 +19,7 @@ const makeControlPanel = () => {
             }
         }
 
+        // Add eventListeners for + and - btns in right menu:
         for (let i = 0; i < bigObject.length; i++) {
             if (isTeamA === teamAMembers.includes(bigObject[i].name)) {
                 document
@@ -53,6 +55,7 @@ const makeControlPanel = () => {
 };
 makeControlPanel();
 
+// Select teams functions:
 const teamABtn = document.querySelector(".team-btn-A");
 const teamBBtn = document.querySelector(".team-btn-B");
 

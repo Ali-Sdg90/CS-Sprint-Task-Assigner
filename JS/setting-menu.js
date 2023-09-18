@@ -4,6 +4,7 @@ const bigObjectSubmit = document.querySelector(".submit-code-btn");
 bigObjectSubmit.addEventListener("click", () => {
     // bigObject = bigObjectInput.value;
     
+    // Check if input.value is valid object to work with:
     try {
         inputValue = JSON.parse(bigObjectInput.value);
         bigObjectInput.style.backgroundColor = "green";
@@ -28,6 +29,7 @@ bigObjectSubmit.addEventListener("click", () => {
     }
 });
 
+// addEventListeners for right menu inputs:
 const taskTimeInput = document.querySelector("#custom-task-time");
 
 document.getElementById("task-queue").addEventListener("change", () => {

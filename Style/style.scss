@@ -6,26 +6,17 @@
 }
 
 body {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // flex-direction: column;
     background-color: #222222;
-    /* color: white; */
     width: 100%;
     height: 100vh;
-
     position: relative;
-    // overflow: hidden;
 
     // div {
-    //     // border: 1px solid rgb(221, 255, 0);
-    //     transform: scale(0.92);
+    //     border: 1px solid rgb(221, 255, 0);
     // }
 }
 
 main {
-    // border: 1px solid red;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     padding: 0 40px;
@@ -35,8 +26,6 @@ main {
         justify-content: center;
         align-items: center;
     }
-
-    // border: 1px solid red;
 }
 
 header {
@@ -216,9 +205,6 @@ a {
     box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.258);
     overflow: hidden;
     padding-bottom: 10px;
-    // position: absolute;
-    // right: 5%;
-    // top: 10px;
 
     .team-selector {
         display: flex;
@@ -227,7 +213,6 @@ a {
         align-items: center;
         margin-bottom: 5px;
 
-        // border: 1px solid blue;
         div {
             height: 50px;
             width: 100%;
@@ -236,7 +221,6 @@ a {
             justify-content: center;
             cursor: pointer;
             transition: background-color 0.15s;
-            // background-color: red;
             color: rgb(61, 61, 61);
             background-color: rgb(71, 71, 71);
 
@@ -372,13 +356,11 @@ a {
     align-items: center;
     flex-direction: column;
     position: relative;
-    /* gap: 10px; */
     transform: scale(0.95);
 }
 
 .wheel-btns {
     position: absolute;
-    /* border: 1px solid red; */
     width: 400px;
     display: flex;
     justify-content: center;
@@ -394,7 +376,6 @@ a {
         cursor: pointer;
         font-size: 30px;
         border-radius: 10px;
-        /* padding: 4px 10px; */
         position: absolute;
         display: flex;
         justify-content: center;

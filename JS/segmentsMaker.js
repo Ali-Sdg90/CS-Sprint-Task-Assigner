@@ -48,6 +48,7 @@ let libSegments = [];
 let minTime = 0;
 let isTeamA = true;
 
+// Create suitable object from bigObject to pass to library to add to wheel:
 const SegmentMakerFunction = () => {
     libSegments = [];
 
@@ -80,6 +81,7 @@ const SegmentMakerFunction = () => {
 };
 SegmentMakerFunction();
 
+// Wheel btns and winner-announcer functions:
 let winner = "";
 
 const spinBtn = document.querySelector(".spin-button");
@@ -89,15 +91,6 @@ const winnerAnnouncer = document.querySelector(".winner-announcer");
 const winnerAnnouncerTxt = document.querySelector(".winner-announcer-txt");
 
 const spinBtnFunc = () => {
-    // spinBtn.removeEventListener("click", spinBtnFunc);
-
-    // setTimeout(() => {
-    //     spinBtn.classList.toggle("hide-btn");
-    //     resetBtn.classList.toggle("hide-btn");
-
-    //     spinBtn.addEventListener("click", spinBtnFunc);
-    // }, 4000);
-
     spinBtn.classList.toggle("hide-btn");
     resetBtn.classList.toggle("hide-btn");
 
