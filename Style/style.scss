@@ -44,8 +44,12 @@ input {
     cursor: text;
 }
 
-footer,
 a {
+    cursor: pointer;
+}
+
+footer,
+.footer-link {
     line-height: 20px;
     display: flex;
     justify-content: center;
