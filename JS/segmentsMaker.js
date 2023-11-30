@@ -28,19 +28,35 @@ const hexArray = [
     "f",
 ];
 
+// Team A at 1402/06/27:
+// const teamAMembers = [
+//     "Afshin Alizadeh",
+//     "Zahra Rezaei",
+//     "Zahra Ahangari",
+//     "Muhammad Amin Saffari",
+//     "Ali Asghar Chavoshi",
+//     "Hootan Hemmati",
+//     "Behzad Seyfi",
+//     "Arian Kazemi",
+//     "Hediye Sezavaran",
+//     "Kimia Heidari",
+//     "Nafiseh Daneshian",
+//     "Ali Sadeghi",
+// ];
+
+// Team A at 1402/09/09:
 const teamAMembers = [
     "Afshin Alizadeh",
     "Zahra Rezaei",
     "Zahra Ahangari",
-    "Muhammad Amin Saffari",
     "Ali Asghar Chavoshi",
     "Hootan Hemmati",
     "Behzad Seyfi",
     "Arian Kazemi",
-    "Hediye Sezavaran",
-    "Kimia Heidari",
     "Nafiseh Daneshian",
+    "Hanieh Sadeghi",
     "Ali Sadeghi",
+    "Ramin Alirezaee",
 ];
 
 let libSegments = [];

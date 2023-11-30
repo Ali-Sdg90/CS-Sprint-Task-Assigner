@@ -1,5 +1,6 @@
 let bigObject = [];
 
+// bigObject at 1402/06/27:
 // let bigObject = [
 //     {
 //         "name": "Elahe Dorani",
@@ -94,3 +95,85 @@ let bigObject = [];
 //         "time": 0
 //     }
 // ]
+
+// ---------------------------------------
+
+// bigObject at 1402/09/09:
+// [
+//     {
+//         name: "Maryam Davoudi",
+//         time: -1,
+//     },
+//     {
+//         name: "Elahe Dorani",
+//         time: -2,
+//     },
+//     {
+//         name: "Behzad Seyfi",
+//         time: -2,
+//     },
+//     {
+//         name: "Hootan Hemmati",
+//         time: 1,
+//     },
+//     {
+//         name: "Ali Asghar Chavoshi",
+//         time: 0,
+//     },
+//     {
+//         name: "Shabnam Abolghasem",
+//         time: 0,
+//     },
+//     {
+//         name: "Ali Hesaraki",
+//         time: 1,
+//     },
+//     {
+//         name: "Hossein Sedghian",
+//         time: 0,
+//     },
+//     {
+//         name: "Faeghe Mohammadian",
+//         time: 2,
+//     },
+//     {
+//         name: "Nafiseh Daneshian",
+//         time: 0,
+//     },
+//     {
+//         name: "Ramin Alirezaee",
+//         time: 2,
+//     },
+//     {
+//         name: "Zahra Ahangari",
+//         time: -1,
+//     },
+//     {
+//         name: "Hanieh Sadeghi",
+//         time: 0,
+//     },
+//     {
+//         name: "Mostafa Zeighami",
+//         time: 2,
+//     },
+//     {
+//         name: "Arian Kazemi",
+//         time: 0,
+//     },
+//     {
+//         name: "Ali Sadeghi",
+//         time: 2,
+//     },
+//     {
+//         name: "Afshin Alizadeh",
+//         time: 0,
+//     },
+//     {
+//         name: "Navid Sadeghi",
+//         time: 0,
+//     },
+//     {
+//         name: "Zahra Rezaei",
+//         time: 2,
+//     },
+// ];

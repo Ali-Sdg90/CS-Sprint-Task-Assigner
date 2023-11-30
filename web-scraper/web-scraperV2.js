@@ -13,17 +13,19 @@ const azureScraperCode = () => {
             if (childDiv) {
                 // console.log(element.querySelectorAll("div")[6].textContent);
 
-                const timeString =
-                    element.querySelectorAll("div")[6].textContent;
+                let availableTime = 0;
 
-                const times = timeString.match(/\d+(\.\d+)?/g)?.map(Number);
-                const availableTime = Math.trunc(times[1] - times[0]);
+                try {
+                    const timeString =
+                        element.querySelectorAll("div")[6].textContent;
+
+                    const times = timeString.match(/\d+(\.\d+)?/g)?.map(Number);
+                    availableTime = Math.trunc(times[1] - times[0]);
+                } catch (err) {
+                    console.log("Some one with no time limit!");
+                }
 
                 let memberName = childDiv.textContent;
-
-                if (memberName === "Muhammad Amin Saffari Taheri") {
-                    memberName = "Muhammad Amin Saffari";
-                }
 
                 const memberObject = {
                     name: memberName,
