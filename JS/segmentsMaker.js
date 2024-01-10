@@ -45,16 +45,27 @@ const hexArray = [
 // ];
 
 // Team A at 1402/09/09:
+// const teamAMembers = [
+//     "Afshin Alizadeh",
+//     "Zahra Rezaei",
+//     "Zahra Ahangari",
+//     "Ali Asghar Chavoshi",
+//     "Hootan Hemmati",
+//     "Behzad Seyfi",
+//     "Arian Kazemi",
+//     "Nafiseh Daneshian",
+//     "Hanieh Sadeghi",
+//     "Ali Sadeghi",
+//     "Ramin Alirezaee",
+// ];
+
+// Team A at 1402/10/20:
 const teamAMembers = [
     "Afshin Alizadeh",
-    "Zahra Rezaei",
     "Zahra Ahangari",
     "Ali Asghar Chavoshi",
     "Hootan Hemmati",
     "Behzad Seyfi",
-    "Arian Kazemi",
-    "Nafiseh Daneshian",
-    "Hanieh Sadeghi",
     "Ali Sadeghi",
     "Ramin Alirezaee",
 ];
