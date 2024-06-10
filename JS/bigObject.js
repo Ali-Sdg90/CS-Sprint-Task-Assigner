@@ -255,3 +255,69 @@ let bigObject = [];
 //         time: 0,
 //     },
 // ];
+
+// ---------------------------------------
+
+// bigObject at 1403/03/21:
+// [
+//     {
+//         name: "Afshin Alizadeh",
+//         time: 0,
+//     },
+//     {
+//         name: "Ali Asghar Chavoshi",
+//         time: 1,
+//     },
+//     {
+//         name: "Ali Sadeghi",
+//         time: 0,
+//     },
+//     {
+//         name: "Dorrin Samadian",
+//         time: 1,
+//     },
+//     {
+//         name: "Elahe Dorani",
+//         time: 1,
+//     },
+//     {
+//         name: "Faeghe Mohammadian",
+//         time: 0,
+//     },
+//     {
+//         name: "Hamidreza Panahi",
+//         time: -1,
+//     },
+//     {
+//         name: "Hootan Hemmati",
+//         time: 0,
+//     },
+//     {
+//         name: "Hossein Sedghian",
+//         time: 3,
+//     },
+//     {
+//         name: "Maryam Davoudi",
+//         time: 1,
+//     },
+//     {
+//         name: "Navid Sadeghi",
+//         time: 0,
+//     },
+//     {
+//         name: "Ramin Alirezaee",
+//         time: 0,
+//     },
+//     {
+//         name: "Shabnam Abolghasem",
+//         time: 0,
+//     },
+//     {
+//         name: "Zahra Ahangari",
+//         time: -2,
+//     },
+//     {
+//         name: "Zahra Rezaei",
+//         time: 1,
+//     },
+// ];

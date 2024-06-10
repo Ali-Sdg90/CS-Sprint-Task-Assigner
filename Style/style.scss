@@ -252,13 +252,15 @@ footer,
 
     h3 {
         text-align: justify;
-        padding: 10px 20px;
+        padding: 8px 20px;
     }
 
     .person {
-        padding: 8px 15px;
+        padding: 6px 4px;
+        margin: 2px 6px;
         display: flex;
         justify-content: space-between;
+        border-bottom: 1px solid#39393933;
 
         .person-time {
             display: flex;
@@ -293,6 +295,10 @@ footer,
                 display: flex;
                 justify-content: center;
             }
+        }
+
+        &:last-child {
+            border: none;
         }
     }
 }
@@ -405,5 +411,15 @@ footer,
 .no-selection {
     &::selection {
         background: none;
+    }
+}
+
+.app-instruction {
+    padding: 5px 15px 0 35px;
+
+    li {
+        font-size: 16px;
+        line-height: 18px;
+        margin: 5px 0;
     }
 }

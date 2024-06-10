@@ -217,12 +217,14 @@ footer,
 }
 .filter-names h3 {
   text-align: justify;
-  padding: 10px 20px;
+  padding: 8px 20px;
 }
 .filter-names .person {
-  padding: 8px 15px;
+  padding: 6px 4px;
+  margin: 2px 6px;
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid rgba(57, 57, 57, 0.2);
 }
 .filter-names .person .person-time {
   display: flex;
@@ -256,6 +258,9 @@ footer,
   width: 20px;
   display: flex;
   justify-content: center;
+}
+.filter-names .person:last-child {
+  border: none;
 }
 
 .winner-announcer {
@@ -361,4 +366,13 @@ footer,
 
 .no-selection::selection {
   background: none;
+}
+
+.app-instruction {
+  padding: 5px 15px 0 35px;
+}
+.app-instruction li {
+  font-size: 16px;
+  line-height: 18px;
+  margin: 5px 0;
 }/*# sourceMappingURL=style.css.map */

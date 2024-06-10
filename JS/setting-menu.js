@@ -3,7 +3,7 @@ const bigObjectSubmit = document.querySelector(".submit-code-btn");
 
 bigObjectSubmit.addEventListener("click", () => {
     // bigObject = bigObjectInput.value;
-    
+
     // Check if input.value is valid object to work with:
     try {
         inputValue = JSON.parse(bigObjectInput.value);
@@ -33,16 +33,16 @@ bigObjectSubmit.addEventListener("click", () => {
 const taskTimeInput = document.querySelector("#custom-task-time");
 
 document.getElementById("task-queue").addEventListener("change", () => {
-    taskTimeInput.value = 1;
+    taskTimeInput.value = 0.5;
 });
 document.getElementById("task-type").addEventListener("change", () => {
-    taskTimeInput.value = 2;
+    taskTimeInput.value = 1;
 });
 document.getElementById("task-onenote").addEventListener("change", () => {
-    taskTimeInput.value = 1;
+    taskTimeInput.value = 0.5;
 });
 document.getElementById("task-meeting").addEventListener("change", () => {
-    taskTimeInput.value = 1;
+    taskTimeInput.value = 0.75;
 });
 
 taskTimeInput.addEventListener("change", () => {

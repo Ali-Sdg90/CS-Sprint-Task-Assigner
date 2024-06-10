@@ -6,8 +6,9 @@ const makeControlPanel = () => {
 
         // Add list to HTML:
         for (let i = 0; i < bigObject.length; i++) {
-            if (isTeamA === teamAMembers.includes(bigObject[i].name)) {
-                teamList.innerHTML += `
+            // Temp commented - include all members
+            // if (isTeamA === teamAMembers.includes(bigObject[i].name)) {
+            teamList.innerHTML += `
                     <div class="person">
                         <div class="name">${bigObject[i].name}</div>
                         <div class="person-time">
@@ -16,7 +17,7 @@ const makeControlPanel = () => {
                             <div class="add-btn${i} member-btns">+</div>
                         </div>
                     </div>`;
-            }
+            // }
         }
 
         // Add eventListeners for + and - btns in right menu:

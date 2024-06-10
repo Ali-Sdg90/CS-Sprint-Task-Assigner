@@ -59,15 +59,34 @@ const hexArray = [
 //     "Ramin Alirezaee",
 // ];
 
-// Team A at 1402/10/20:
+// // Team A at 1402/10/20:
+// const teamAMembers = [
+//     "Afshin Alizadeh",
+//     "Zahra Ahangari",
+//     "Ali Asghar Chavoshi",
+//     "Hootan Hemmati",
+//     "Behzad Seyfi",
+//     "Ali Sadeghi",
+//     "Ramin Alirezaee",
+// ];
+
+// We have merged two teams together. Now, we only have one team, Team A.
+// 1403/03/21
 const teamAMembers = [
     "Afshin Alizadeh",
+    "Maryam Davoudi",
+    "Elahe Dorani",
+    "Zahra Rezaei",
     "Zahra Ahangari",
     "Ali Asghar Chavoshi",
+    "Navid Sadeghi",
     "Hootan Hemmati",
-    "Behzad Seyfi",
     "Ali Sadeghi",
+    "Shabnam Abolghasem",
+    "Faeghe Mohammadian",
     "Ramin Alirezaee",
+    "Dorrin Samadian",
+    "Hamidreza Panahi",
 ];
 
 let libSegments = [];
@@ -82,26 +101,27 @@ const SegmentMakerFunction = () => {
     for (let person = 0; person < bigObject.length; person++) {
         // console.log(teamAMembers.includes(bigObject[person].name));
 
-        if (isTeamA === teamAMembers.includes(bigObject[person].name)) {
-            if (bigObject[person].time >= minTime) {
-                const chanceArray = [];
+        // Temp commented - include all members
+        // if (isTeamA === teamAMembers.includes(bigObject[person].name)) {
+        if (bigObject[person].time >= minTime) {
+            const chanceArray = [];
 
-                let personColor = "#";
-                for (let i = 0; i < 6; i++) {
-                    personColor += hexArray[Math.trunc(Math.random() * 12)];
-                }
-
-                for (let i = 0; i < bigObject[person].time; i++) {
-                    const chanceObj = {
-                        fillStyle: personColor,
-                        text: bigObject[person].name,
-                    };
-                    chanceArray.push(chanceObj);
-                }
-
-                libSegments.push(...chanceArray);
+            let personColor = "#";
+            for (let i = 0; i < 6; i++) {
+                personColor += hexArray[Math.trunc(Math.random() * 12)];
             }
+
+            for (let i = 0; i < bigObject[person].time; i++) {
+                const chanceObj = {
+                    fillStyle: personColor,
+                    text: bigObject[person].name,
+                };
+                chanceArray.push(chanceObj);
+            }
+
+            libSegments.push(...chanceArray);
         }
+        // }
     }
 
     console.log(libSegments);
